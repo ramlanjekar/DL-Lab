@@ -84,41 +84,13 @@ Core libraries used across notebooks include:
 ## Setup
 
 1. Create and activate a Python 3.10+ environment.
-2. Install core packages:
+2. Install core packages: this is mentioned in the notebook
 
-```bash
-pip install torch transformers accelerate peft trl datasets pandas numpy pillow
-```
 
-3. Install optional evaluation packages if you plan to run full metric benchmarking:
 
-```bash
-pip install sentence-transformers evaluate bert_score spacy nltk google-genai
-```
-
-4. Download spaCy model if needed:
-
-```bash
-python -m spacy download en_core_web_sm
-```
-
-5. Configure required tokens/secrets in your runtime environment:
+3. Configure required tokens/secrets in your runtime environment:
 - Hugging Face token (for gated model access),
 - Gemini/Google API key (for G-Eval judging in relevant notebook cells).
-
----
-
-## Typical Workflow
-
-Recommended order:
-
-1. Read `DL_Lab.pdf` for full methodology and rationale.
-2. Run `NLP_metric_comparsion.ipynb` to understand metric choice.
-3. Run `vlm_inference.ipynb` for zero-shot and/or adapter inference + G-Eval scoring.
-4. Fine-tune with:
-   - `Finetunning Scripts/intervl_finetunning.ipynb` (InternVL),
-   - `Finetunning Scripts/qwen_finetunning.ipynb` (Qwen).
-5. Compare outputs in `Reports/`.
 
 ---
 
